@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yjz.notepad.dao.IUserDao">
+
+    <select id="queryUserAll" resultType="User">
+        select * from user
+    </select>
+
+    <insert id="addUserByObject" parameterType="User">
+        INSERT INTO user(username,register_time) VALUES(#{username},#{register_time});
+    </insert>
+
+    <delete id="deleteUserById" parameterType="Long">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+
+</mapper>
