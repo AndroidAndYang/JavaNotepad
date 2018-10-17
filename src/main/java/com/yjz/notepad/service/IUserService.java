@@ -9,7 +9,7 @@ import java.util.List;
  * date:  2018/10/10
  * des:
  */
-public interface UserService {
+public interface IUserService {
 
     /**
      * @param user user

@@ -1,8 +1,7 @@
 package com.yjz.notepad.test;
 
 import com.yjz.notepad.bean.User;
-import com.yjz.notepad.dao.IUserDao;
-import com.yjz.notepad.service.UserService;
+import com.yjz.notepad.service.IUserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -14,7 +13,7 @@ import java.util.List;
 
 /**
  * author： YJZ
- * date:  2018/10/10
+ * date:  2018/10/17
  * des: User 相关功能测试
  */
 
@@ -23,7 +22,7 @@ import java.util.List;
 public class UserTest {
 
     @Resource
-    private UserService userService;
+    private IUserService userService;
 
     @Test
     public void testQueryUserAll() {
