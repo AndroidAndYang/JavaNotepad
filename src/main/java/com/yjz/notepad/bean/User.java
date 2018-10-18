@@ -15,6 +15,7 @@ public class User {
 
     private Long id;
     private String username;
+    private String phone;
     private Date register_time;
 
 }

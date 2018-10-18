@@ -16,6 +16,12 @@
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/resource/spring-mybatis.xml</file>
         </fileset>
+        <fileset id="fileset" name="Spring Mabtis" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resource/spring-mabtis.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Mvc" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resource/spring-mvc.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>

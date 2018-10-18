@@ -35,7 +35,8 @@ public class UserTest {
     @Test
     public void testAddUserByObject() {
         User user = new User();
-        user.setUsername("LNX");
+        user.setUsername("YJZ");
+        user.setPhone("17621859608");
         user.setRegister_time(new Date());
         int addState = userService.addUserByObject(user);
         if (addState > 0) {
@@ -45,7 +46,7 @@ public class UserTest {
 
     @Test
     public void testDeleteUserById() {
-        int deleteState = userService.deleteUserById(27L);
+        int deleteState = userService.deleteUserById(1L);
         if (deleteState > 0) {
             System.out.println("刪除成功");
         }
