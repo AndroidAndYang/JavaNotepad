@@ -20,7 +20,7 @@ public class UserServiceImpl implements IUserService {
     private IUserDao userDao;
 
     @Override
-    public int addUserByObject(User user) {
+    public Long addUserByObject(User user) {
         return userDao.addUserByObject(user);
     }
 

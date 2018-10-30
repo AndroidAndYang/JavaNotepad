@@ -14,7 +14,7 @@ public class R extends HashMap<String, Object> {
     private static final String data = "data";
 
     private R() {
-        put(status, 0);
+        put(status, 200);
         put(message, "操作成功");
     }
 

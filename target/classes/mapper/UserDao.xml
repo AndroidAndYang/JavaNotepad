@@ -7,7 +7,13 @@
     </select>
 
     <insert id="addUserByObject" parameterType="User">
-        INSERT INTO user(username,register_time) VALUES(#{username},#{register_time});
+        <!--
+            返回新增时的主键ID, MySql在order中使用AFTER,而oracle使用before
+        -->
+        <selectKey resultType="Long" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO user(username,phone,register_time) VALUES(#{username},#{phone},#{register_time});
     </insert>
 
     <delete id="deleteUserById" parameterType="Long">

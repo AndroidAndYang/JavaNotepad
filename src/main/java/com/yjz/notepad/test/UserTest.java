@@ -18,7 +18,7 @@ import java.util.List;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring-mybatis.xml"})
+@ContextConfiguration({"classpath:spring/spring-mybatis.xml"})
 public class UserTest {
 
     @Resource
@@ -37,10 +37,11 @@ public class UserTest {
         User user = new User();
         user.setUsername("YJZ");
         user.setPhone("17621859608");
-        user.setRegister_time(new Date());
-        int addState = userService.addUserByObject(user);
-        if (addState > 0) {
-            System.out.println("插入成功");
+        Date date = new Date();
+        user.setRegister_time(date);
+        Long userID = userService.addUserByObject(user);
+        if (userID > 0) {
+            System.out.println("插入成功" + user.getId());
         }
     }
 

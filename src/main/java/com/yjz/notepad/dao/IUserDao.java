@@ -20,9 +20,9 @@ public interface IUserDao {
 
     /**
      * @param user user
-     * @return 成功的状态
+     * @return 插入的主键ID
      */
-    int addUserByObject(User user);
+    Long addUserByObject(User user);
 
     /**
      * @param id userID
