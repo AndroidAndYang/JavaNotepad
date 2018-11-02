@@ -35,7 +35,7 @@ public class UserTest {
     @Test
     public void testAddUserByObject() {
         User user = new User();
-        user.setUsername("YJZ");
+        user.setPassword("YJZ");
         user.setPhone("17621859608");
         Date date = new Date();
         user.setRegister_time(date);

@@ -2,6 +2,7 @@ package com.yjz.notepad.controller;
 
 import com.yjz.notepad.bean.R;
 import com.yjz.notepad.bean.User;
+import com.yjz.notepad.exception.BaseException;
 import com.yjz.notepad.service.IUserService;
 import com.yjz.notepad.util.StringUtil;
 import org.springframework.stereotype.Controller;
@@ -33,8 +34,14 @@ public class UserController {
 
         System.out.println(user.toString());
 
-        if (StringUtil.isEmpty(user.getUsername()) || StringUtil.isEmpty(user.getPhone())) {
-            return R.error(400, "用户数据为空");
+        for (User user1 : userService.queryUserAll()) {
+            if (user1.getPhone().equals(user.getPhone())) {
+                return R.error(BaseException.ERROR_HTTP_300, "用戶已存在");
+            }
+        }
+
+        if (StringUtil.isEmpty(user.getPassword()) || StringUtil.isEmpty(user.getPhone())) {
+            return R.ok("用户数据为空");
         }
 
         if (user.getRegister_time() == null) {
