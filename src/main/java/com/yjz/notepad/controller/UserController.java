@@ -36,7 +36,7 @@ public class UserController {
 
         for (User user1 : userService.queryUserAll()) {
             if (user1.getPhone().equals(user.getPhone())) {
-                return R.error(BaseException.ERROR_HTTP_300, "用戶已存在");
+                return R.error("用戶已存在");
             }
         }
 
@@ -52,8 +52,27 @@ public class UserController {
         if (userId > 0) {
             return R.ok("注册成功", user.getId());
         } else {
-            return R.error(400, "注册失败");
+            return R.error("注册失败");
         }
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @ResponseBody
+    public HashMap<String, Object> login(User user) {
+
+        System.out.println(user.toString());
+
+        if (StringUtil.isEmpty(user.getPhone()) || StringUtil.isEmpty(user.getPassword())) {
+            return R.error("登录信息不能为空");
+        }
+
+        for (User user1 : userService.queryUserAll()) {
+            if (user1.getPhone().equals(user.getPhone()) && user1.getPassword().equals(user.getPassword())) {
+                return R.ok("登录成功", user1.getId());
+            }
+        }
+
+        return R.error("用户名或密码错误");
     }
 
     @RequestMapping(value = "/query_list", method = RequestMethod.GET)

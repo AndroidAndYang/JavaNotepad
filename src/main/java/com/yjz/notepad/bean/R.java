@@ -32,7 +32,7 @@ public class R extends HashMap<String, Object> {
     }
 
     public static R error(String msg) {
-        return error(500, msg);
+        return error(0, msg);
     }
 
     public static R ok(String msg, Object object) {
@@ -41,6 +41,21 @@ public class R extends HashMap<String, Object> {
         r.put(data, object);
         return r;
     }
+
+    public static R ok(String msg, boolean isSuccess, String message) {
+        R r = new R();
+        r.put(message, msg);
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("isSuccess", isSuccess);
+        hashMap.put("message", message);
+        r.put(data, hashMap);
+        return r;
+    }
+
+    public static R ok(boolean isSuccess, String message) {
+        return ok("请求成功", isSuccess, message);
+    }
+
 
     public static R ok(String msg) {
         R r = new R();
