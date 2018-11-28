@@ -61,15 +61,16 @@ public class UserController {
     @ResponseBody
     public HashMap<String, Object> login(User user) {
 
-        System.out.println(user.toString());
+        System.out.println("user = " + user.toString());
 
         if (StringUtil.isEmpty(user.getPhone()) || StringUtil.isEmpty(user.getPassword())) {
             return R.error("登录信息不能为空");
         }
 
-        for (User user1 : userService.queryUserAll()) {
-            if (user1.getPhone().equals(user.getPhone()) && user1.getPassword().equals(user.getPassword())) {
-                return R.ok("登录成功", user1.getId());
+        for (User dbUser : userService.queryUserAll()) {
+            System.out.println("dbUser = " + dbUser.toString());
+            if (dbUser.getPhone().equals(user.getPhone()) && dbUser.getPassword().equals(user.getPassword())) {
+                return R.ok("登录成功", dbUser.getId());
             }
         }
 

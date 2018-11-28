@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yjz.notepad.dao.IBookkeepingDao">
+
+    <insert id="addBookkeepingDate" parameterType="BookkeepingBean">
+        <!--
+               返回新增时的主键ID, MySql在order中使用AFTER,而oracle使用before
+           -->
+        <selectKey resultType="Long" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO bookkeeping(user_id,type_id,classification_id, money_type, content, money, add_time,exact_time)
+        VALUES (#{userId}, #{bookTypeId},#{classificationId},#{moneyType}, #{content}, #{money},#{addTime},
+        #{exactAddTime});
+    </insert>
+</mapper>

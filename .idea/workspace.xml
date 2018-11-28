@@ -8,15 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc233b2d-b824-4171-b3be-29d793c303df" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/BookkeepingBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/UserBookkeepingBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/BookkeepingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/dao/IBookkeepingDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IBookkeepingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/impl/BookkeepingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/test/BookkeepingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resource/mapper/BookkeepingDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/sql/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/sql/notepad.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/sql/notepad.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/sql/notepad.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yjz/notepad/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yjz/notepad/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sql/user.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/notepad.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/notepad.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/notepad/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/notepad/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/notepad/WEB-INF/classes/com/yjz/notepad/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/notepad/WEB-INF/classes/com/yjz/notepad/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/notepad/WEB-INF/lib/jackson-annotations-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/notepad/WEB-INF/lib/jackson-core-2.8.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/notepad/WEB-INF/classes/sql/user.sql" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/UserController.java">
+      <file leaf-file-name="BookkeepingDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/BookkeepingDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+            <state relative-caret-position="408">
+              <caret line="24" column="75" lean-forward="true" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -40,30 +47,17 @@
       <file leaf-file-name="notepad.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resource/sql/notepad.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+            <state relative-caret-position="576">
+              <caret line="60" column="8" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="R.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/R.java">
+      <file leaf-file-name="BookkeepingController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/BookkeepingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-              <folding>
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Md5Helper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/util/Md5Helper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+            <state relative-caret-position="187">
+              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +65,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IUserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IUserService.java">
+      <file leaf-file-name="BookkeepingTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/test/BookkeepingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserBookkeepingBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/UserBookkeepingBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IBookkeepingService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IBookkeepingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="31" selection-end-column="101" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookkeepingServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/impl/BookkeepingServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+              <caret line="29" column="74" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookkeepingBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/BookkeepingBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IBookkeepingDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/dao/IBookkeepingDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,6 +148,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -94,7 +158,11 @@
       <find>D</find>
       <find>&quot;code&quot;</find>
       <find>contain</find>
+      <find>`</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,8 +196,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/BaseBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/util/Md5Helper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/R.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resource/sql/user.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IBookService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/BookkeepingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/BookkeepingBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IBookkeepingService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/dao/IBookkeepingDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/test/BookkeepingTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/impl/BookkeepingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/UserBookkeepingBean.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/mapper/BookkeepingDao.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/sql/notepad.sql" />
       </list>
     </option>
@@ -160,8 +237,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -172,7 +249,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,7 +288,78 @@
               <item name="notepad" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
+              <item name="notepad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="notepad" type="b2602c69:ProjectViewProjectNode" />
@@ -225,7 +373,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,7 +411,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat">
+  <component name="RunManager" selected="JUnit.BookkeepingTest.testQueryUserByBookkeepingType">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -301,6 +449,52 @@
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
+    </configuration>
+    <configuration name="BookkeepingTest.testAddBookkeepingData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notepad" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yjz.notepad.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yjz.notepad.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yjz.notepad.test.BookkeepingTest" />
+      <option name="METHOD_NAME" value="testAddBookkeepingData" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="notepad" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yjz.notepad.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yjz.notepad.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yjz.notepad.test.BookkeepingTest" />
+      <option name="METHOD_NAME" value="testQueryUserByBookkeepingType" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="UserTest.testAddUserByObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="notepad" />
@@ -521,9 +715,13 @@
       <item itemvalue="JUnit.UserTest.testAddUserByObject" />
       <item itemvalue="JUnit.UserTest.testDeleteUserById" />
       <item itemvalue="JUnit.UserTest.testQueryUserAll" />
+      <item itemvalue="JUnit.BookkeepingTest.testAddBookkeepingData" />
+      <item itemvalue="JUnit.BookkeepingTest.testQueryUserByBookkeepingType" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookkeepingTest.testQueryUserByBookkeepingType" />
+        <item itemvalue="JUnit.BookkeepingTest.testAddBookkeepingData" />
         <item itemvalue="JUnit.UserTest.testQueryUserAll" />
         <item itemvalue="JUnit.UserTest.testDeleteUserById" />
         <item itemvalue="JUnit.UserTest.testAddUserByObject" />
@@ -563,44 +761,46 @@
       <workItem from="1542597148964" duration="2052000" />
       <workItem from="1542682946473" duration="1256000" />
       <workItem from="1542878674540" duration="1208000" />
-      <workItem from="1543202635665" duration="3899000" />
+      <workItem from="1543202635665" duration="5967000" />
+      <workItem from="1543308689279" duration="2371000" />
+      <workItem from="1543374585853" duration="10385000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserTest_testQueryUserAll - 2018.10.30 at 17h 37m 32s.xml">
-      <configuration name="UserTest.testQueryUserAll" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 11h 58m 39s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testAddUserByObject - 2018.10.30 at 17h 41m 44s.xml">
-      <configuration name="UserTest.testAddUserByObject" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 12h 02m 26s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testDeleteUserById - 2018.10.30 at 17h 44m 43s.xml">
-      <configuration name="UserTest.testDeleteUserById" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 12h 03m 18s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testAddUserByObject - 2018.10.30 at 17h 45m 06s.xml">
-      <configuration name="UserTest.testAddUserByObject" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 12h 40m 58s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testAddUserByObject - 2018.10.30 at 17h 47m 38s.xml">
-      <configuration name="UserTest.testAddUserByObject" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 12h 43m 20s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testAddUserByObject - 2018.10.30 at 17h 48m 20s.xml">
-      <configuration name="UserTest.testAddUserByObject" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 12h 52m 01s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testAddUserByObject - 2018.10.30 at 17h 48m 44s.xml">
-      <configuration name="UserTest.testAddUserByObject" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 12h 56m 36s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testQueryUserAll - 2018.10.30 at 17h 48m 50s.xml">
-      <configuration name="UserTest.testQueryUserAll" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 13h 19m 12s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testAddUserByObject - 2018.10.30 at 17h 52m 13s.xml">
-      <configuration name="UserTest.testAddUserByObject" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 13h 24m 43s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserTest_testAddUserByObject - 2018.10.30 at 17h 52m 44s.xml">
-      <configuration name="UserTest.testAddUserByObject" configurationId="JUnit" />
+    <history-entry file="BookkeepingTest_testQueryUserByBookkeepingType - 2018.11.28 at 13h 24m 59s.xml">
+      <configuration name="BookkeepingTest.testQueryUserByBookkeepingType" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59253000" />
+    <option name="totallyTimeSpent" value="74077000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,39 +819,39 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="CDI" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Flutter Outline" order="4" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="JSF" order="3" />
+      <window_info id="Structure" order="1" sideWeight="0.50108695" side_tool="true" weight="0.1826411" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32934782" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.58913046" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32934782" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5206522" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32934782" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18104367" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49891305" visible="true" weight="0.1826411" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Flutter Inspector" order="4" />
-      <window_info anchor="right" id="Properties" order="3" />
+      <window_info id="Nl-Palette" order="2" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32934782" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Properties" order="3" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -659,6 +859,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -673,50 +883,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/spring/spring-mvc.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resource/spring/spring-mybatis.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2822">
-          <caret line="166" selection-start-line="166" selection-end-line="166" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/dao/IUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" selection-start-line="13" selection-start-column="3" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -848,38 +1014,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/dao/IUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/test/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -901,16 +1039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -941,15 +1069,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        <state relative-caret-position="289">
+          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/test/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/UserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/dao/IBookkeepingDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/BookkeepingBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/test/BookkeepingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/IBookkeepingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="31" selection-end-column="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/controller/BookkeepingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/service/impl/BookkeepingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="74" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yjz/notepad/bean/UserBookkeepingBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mapper/BookkeepingDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="75" lean-forward="true" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/sql/notepad.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+        <state relative-caret-position="576">
+          <caret line="60" column="8" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
         </state>
       </provider>
     </entry>

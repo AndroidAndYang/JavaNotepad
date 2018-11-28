@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yjz.notepad.dao.IBookkeepingDao">
+
+    <!-- 记账 -->
+    <insert id="addBookkeepingDate" parameterType="BookkeepingBean">
+        <!--
+               返回新增时的主键ID, MySql在order中使用AFTER,而oracle使用before
+           -->
+        <selectKey resultType="Long" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO bookkeeping(user_id,type_id,classification_id, money_type, content, money, add_time,exact_time)
+        VALUES (#{userId}, #{bookTypeId},#{classificationId},#{moneyType}, #{content}, #{money},#{addTime},
+        #{exactAddTime});
+    </insert>
+
+    <!-- 查询记账数据 -->
+    <select id="queryUserByBookkeepingType" resultType="UserBookkeepingBean">
+        SELECT b.user_id,b.content,b.money,b.money_type,c.des,t.name,b.exact_time
+			FROM bookkeeping b
+			LEFT JOIN user u on u.id = b.user_id
+			LEFT JOIN classification c on c.id = b.classification_id
+			LEFT JOIN bookkeeping_type t on t.id = b.type_id
+			WHERE b.user_id=#{0} AND b.type_id=#{1} AND b.add_time = #{2} ;
+    </select>
+
+</mapper>
