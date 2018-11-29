@@ -15,14 +15,19 @@
         #{exactAddTime});
     </insert>
 
-    <!-- 查询记账数据 -->
-    <select id="queryUserByBookkeepingType" resultType="UserBookkeepingBean">
+    <!-- 查询用戶一个月中记账了日期 -->
+    <select id="queryBookkeepingDateByMonth" resultType="java.lang.String">
+        SELECT exact_time FROM bookkeeping WHERE user_id=#{0} AND type_id =#{1}  AND add_time=#{2} order by exact_time;
+    </select>
+
+    <!-- 查询用户一个月中所有的记账记录 -->
+    <select id="queryAllBookkeeping" resultType="UserBookkeepingBean">
         SELECT b.user_id,b.content,b.money,b.money_type,c.des,t.name,b.exact_time
 			FROM bookkeeping b
 			LEFT JOIN user u on u.id = b.user_id
 			LEFT JOIN classification c on c.id = b.classification_id
 			LEFT JOIN bookkeeping_type t on t.id = b.type_id
-			WHERE b.user_id=#{0} AND b.type_id=#{1} AND b.add_time = #{2} ;
+			WHERE b.user_id=#{0} AND b.type_id=#{1} AND b.exact_time = #{2} ;
     </select>
 
 </mapper>

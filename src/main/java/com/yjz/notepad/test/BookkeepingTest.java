@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -43,13 +44,23 @@ public class BookkeepingTest {
     }
 
     /**
-     * 查詢记账数据
+     * 查詢用户一个月的记账记录
      */
     @Test
     public void testQueryUserByBookkeepingType() {
-        List<UserBookkeepingBean> userBookkeepingBeans = service.queryUserByBookkeepingType(19L, 1L, "2018-11");
-        for (UserBookkeepingBean userBookkeepingBean : userBookkeepingBeans) {
-            System.out.println(userBookkeepingBean.toString());
+        List<String> dataList = new ArrayList<>();
+        List<String> userBookkeepingBeans = service.queryBookkeepingDateByMonth(2L, 1L, "2018-11");
+        for (String exactDate : userBookkeepingBeans) {
+            if (!dataList.contains(exactDate)) {
+                dataList.add(exactDate);
+            }
+        }
+        for (String exactTime : dataList) {
+            List<UserBookkeepingBean> userBookkeepingBeans1 = service.queryAllBookkeeping(2L, 1L, exactTime);
+            for (UserBookkeepingBean userBookkeepingBean : userBookkeepingBeans1) {
+                System.out.println(userBookkeepingBean.toString());
+            }
+            System.out.println("-------------------------------");
         }
     }
 }

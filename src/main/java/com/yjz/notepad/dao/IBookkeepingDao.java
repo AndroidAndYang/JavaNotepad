@@ -21,13 +21,23 @@ public interface IBookkeepingDao {
     Long addBookkeepingDate(BookkeepingBean bookkeepingBean);
 
     /**
-     * 查询用户某个月数据
+     * 查询用户某个月记账的天的日期
      *
-     * @param userID  用戶id
-     * @param addTime 添加事件
+     * @param userID   用戶id
+     * @param addTime  添加某个月
      * @param bookType 记账本类型
-     * @return 某个月的记账数据
+     * @return 用户某个月记账的天的日期
      */
-    List<UserBookkeepingBean> queryUserByBookkeepingType(Long userID, Long bookType, String addTime);
+    List<String> queryBookkeepingDateByMonth(Long userID, Long bookType, String addTime);
+
+    /**
+     * 查询用户某个月所有的记账记录
+     *
+     * @param userID   用戶id
+     * @param exactTime 添加的某一天
+     * @param bookType 记账本类型
+     * @return 用户某个月所有的记账记录
+     */
+    List<UserBookkeepingBean> queryAllBookkeeping(Long userID, Long bookType, String exactTime);
 
 }

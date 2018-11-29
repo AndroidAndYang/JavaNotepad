@@ -38,14 +38,23 @@ CREATE TABLE bookkeeping(
 	money_type BIGINT(11) NOT NULL COMMENT '记账类型：0 收入 1支出',
 	des VARCHAR(32) NOT NULL COMMENT '记账描述',
 	money DECIMAL NOT NULL COMMENT '记账金额',
-	add_time TIMESTAMP NOT NULL COMMENT '记账时间',
+	add_time TIMESTAMP NOT NULL COMMENT '记账年月时间',
+	exact_time TIMESTAMP NOT NULL COMMENT '记账时间',
 	PRIMARY KEY(id),
   --  外键约束
 	FOREIGN KEY(user_id) REFERENCES user(id),
 	FOREIGN KEY(type_id) REFERENCES bookkeeping_type(id),
 	FOREIGN KEY(classification_id) REFERENCES classification(id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
-INSERT INTO bookkeeping(user_id,type_id,classification_id,money_type,content,money,add_time) VALUES (2,1,2,1,'人情红包',1000,'2018-11-26 13:39:58');
+--  插入
+INSERT INTO bookkeeping(`user_id`,`type_id`,`classification_id`, `money_type`, `content`, `money`, `add_time`,exact_time) VALUES (2, 1,1,1, '人情', 100,'2018-10', '2018-11-26 13:39:58');
+--  查询
+SELECT b.user_id,b.content,b.money,b.money_type,c.des
+			FROM bookkeeping b
+			LEFT JOIN user u on u.id = b.user_id
+			LEFT JOIN classification c on c.id = b.classification_id
+			LEFT JOIN bookkeeping_type t on t.id = b.type_id
+			WHERE b.user_id=19 AND b.type_id=1 AND b.add_time = '2018-11' ;
 
 -- ----------------------------
 -- Table structure for bookkeeping_type
@@ -61,14 +70,3 @@ INSERT INTO bookkeeping_type(name) VALUES ('日常记账本');
 INSERT INTO bookkeeping_type(name) VALUES ('生意记账本');
 INSERT INTO bookkeeping_type(name) VALUES ('结婚记账本');
 INSERT INTO bookkeeping_type(name) VALUES ('旅游记账本');
-
--- ----------------------------
--- sql
--- ----------------------------
-
---  查询全部用户的记账表(指定用戶只需要在后面加上 WHERE b.user_id = x)
-SELECT b.user_id,b.type_id,b.content,b.money,b.money_type,u.phone,c.des
-			FROM bookkeeping b
-			LEFT JOIN user u on u.id = b.user_id
-			LEFT JOIN classification c on c.id = b.classification_id
-			LEFT JOIN bookkeeping_type t on t.id = b.type_id;

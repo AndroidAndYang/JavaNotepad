@@ -26,7 +26,12 @@ public class BookkeepingServiceImpl implements IBookkeepingService {
     }
 
     @Override
-    public List<UserBookkeepingBean> queryUserByBookkeepingType(Long userID, Long bookType, String addTime) {
-        return bookkeepingDao.queryUserByBookkeepingType(userID, bookType, addTime);
+    public List<String> queryBookkeepingDateByMonth(Long userID, Long bookType, String addTime) {
+        return bookkeepingDao.queryBookkeepingDateByMonth(userID, bookType, addTime);
+    }
+
+    @Override
+    public List<UserBookkeepingBean> queryAllBookkeeping(Long userID, Long bookType, String exactTime) {
+        return bookkeepingDao.queryAllBookkeeping(userID, bookType, exactTime);
     }
 }
