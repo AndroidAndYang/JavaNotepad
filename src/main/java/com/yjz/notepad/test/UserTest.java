@@ -38,7 +38,7 @@ public class UserTest {
         user.setPassword("YJZ");
         user.setPhone("17621859608");
         Date date = new Date();
-        user.setRegister_time(date);
+        user.setRegisterTime(date);
         Long userID = userService.addUserByObject(user);
         if (userID > 0) {
             System.out.println("插入成功" + user.getId());

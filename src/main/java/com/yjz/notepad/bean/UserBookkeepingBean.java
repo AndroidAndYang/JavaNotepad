@@ -16,7 +16,7 @@ public class UserBookkeepingBean {
     private String des;
     // 账本名称
     private String name;
-    // 支出还是收入
+    // 0收入 1支出
     private Long moneyType;
     // 内容
     private String content;
@@ -24,4 +24,5 @@ public class UserBookkeepingBean {
     private float money;
     // 真实日期
     private String exactTime;
+
 }

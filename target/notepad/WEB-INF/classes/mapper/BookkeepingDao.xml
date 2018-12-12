@@ -11,13 +11,23 @@
             SELECT LAST_INSERT_ID()
         </selectKey>
         INSERT INTO bookkeeping(user_id,type_id,classification_id, money_type, content, money, add_time,exact_time)
-        VALUES (#{userId}, #{bookTypeId},#{classificationId},#{moneyType}, #{content}, #{money},#{addTime},
-        #{exactAddTime});
+        VALUES (#{userId}, #{bookTypeId},#{classificationId},#{moneyType}, #{content},
+        #{money},#{addTime},#{exactAddTime});
     </insert>
 
-    <!-- 查询记账数据 -->
-    <select id="queryUserByBookkeepingDate" resultType="List">
-        SELECT exact_time FROM bookkeeping WHERE user_id=#{0};
+    <!-- 查询用戶一个月中记账了日期 -->
+    <select id="queryBookkeepingDateByMonth" resultType="UserMonthDate">
+        SELECT money_type,money,exact_time FROM bookkeeping WHERE user_id=#{0} AND type_id =#{1}  AND add_time=#{2} order by exact_time;
+    </select>
+
+    <!-- 查询用户一个月中所有的记账记录 -->
+    <select id="queryAllBookkeeping" resultType="UserBookkeepingBean">
+        SELECT b.user_id,b.content,b.money,b.money_type,c.des,t.name,b.exact_time
+			FROM bookkeeping b
+			LEFT JOIN user u on u.id = b.user_id
+			LEFT JOIN classification c on c.id = b.classification_id
+			LEFT JOIN bookkeeping_type t on t.id = b.type_id
+			WHERE b.user_id=#{0} AND b.type_id=#{1} AND b.exact_time = #{2} ;
     </select>
 
 </mapper>

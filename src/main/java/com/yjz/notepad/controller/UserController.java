@@ -45,8 +45,8 @@ public class UserController {
             return R.ok("用户数据为空");
         }
 
-        if (user.getRegister_time() == null) {
-            user.setRegister_time(new Date());
+        if (user.getRegisterTime() == null) {
+            user.setRegisterTime(new Date());
         }
 
         Long userId = userService.addUserByObject(user);

@@ -16,6 +16,6 @@ public class User {
     private Long id;
     private String phone;
     private String password;
-    private Date register_time;
+    private Date registerTime;
 
 }

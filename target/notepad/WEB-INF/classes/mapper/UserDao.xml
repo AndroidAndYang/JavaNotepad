@@ -13,7 +13,7 @@
         <selectKey resultType="Long" order="AFTER" keyProperty="id">
             SELECT LAST_INSERT_ID()
         </selectKey>
-        INSERT INTO user(phone,password,register_time) VALUES(#{phone},#{password},#{register_time});
+        INSERT INTO user(phone,password,register_time) VALUES(#{phone},#{password},#{registerTime});
     </insert>
 
     <delete id="deleteUserById" parameterType="Long">

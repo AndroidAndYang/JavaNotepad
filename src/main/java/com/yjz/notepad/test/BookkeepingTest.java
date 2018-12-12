@@ -2,6 +2,7 @@ package com.yjz.notepad.test;
 
 import com.yjz.notepad.bean.BookkeepingBean;
 import com.yjz.notepad.bean.UserBookkeepingBean;
+import com.yjz.notepad.bean.UserMonthDate;
 import com.yjz.notepad.service.IBookkeepingService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,17 +50,37 @@ public class BookkeepingTest {
     @Test
     public void testQueryUserByBookkeepingType() {
         List<String> dataList = new ArrayList<>();
-        List<String> userBookkeepingBeans = service.queryBookkeepingDateByMonth(2L, 1L, "2018-11");
-        for (String exactDate : userBookkeepingBeans) {
-            if (!dataList.contains(exactDate)) {
-                dataList.add(exactDate);
+        List<UserMonthDate> userBookkeepingBeans = service.queryBookkeepingDateByMonth(2L, 1L, "2018-11");
+        float allMonthIn = 0f;
+        float allMonthOut = 0f;
+        for (UserMonthDate exactDate : userBookkeepingBeans) {
+            if (exactDate.getMoneyType() == 0) {
+                // 收入
+                allMonthIn += exactDate.getMoney();
+            } else {
+                // 支出
+                allMonthOut += exactDate.getMoney();
+            }
+            if (!dataList.contains(exactDate.getExactTime())) {
+                dataList.add(exactDate.getExactTime());
             }
         }
+        System.out.println(" allMonthIn = " + allMonthIn + " allMonthOut = " + allMonthOut);
         for (String exactTime : dataList) {
+            float allIn = 0f;
+            float allOut = 0f;
             List<UserBookkeepingBean> userBookkeepingBeans1 = service.queryAllBookkeeping(2L, 1L, exactTime);
             for (UserBookkeepingBean userBookkeepingBean : userBookkeepingBeans1) {
+                if (userBookkeepingBean.getMoneyType() == 1) {
+                    // 支出
+                    allOut += userBookkeepingBean.getMoney();
+                } else {
+                    // 收入
+                    allIn += userBookkeepingBean.getMoney();
+                }
                 System.out.println(userBookkeepingBean.toString());
             }
+            System.out.println("allIn = " + allIn + " allOut = " + allOut);
             System.out.println("-------------------------------");
         }
     }

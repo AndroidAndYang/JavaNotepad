@@ -2,6 +2,7 @@ package com.yjz.notepad.service.impl;
 
 import com.yjz.notepad.bean.BookkeepingBean;
 import com.yjz.notepad.bean.UserBookkeepingBean;
+import com.yjz.notepad.bean.UserMonthDate;
 import com.yjz.notepad.dao.IBookkeepingDao;
 import com.yjz.notepad.service.IBookkeepingService;
 import org.springframework.stereotype.Service;
@@ -26,8 +27,8 @@ public class BookkeepingServiceImpl implements IBookkeepingService {
     }
 
     @Override
-    public List<String> queryBookkeepingDateByMonth(Long userID, Long bookType, String addTime) {
-        return bookkeepingDao.queryBookkeepingDateByMonth(userID, bookType, addTime);
+    public List<UserMonthDate> queryBookkeepingDateByMonth(Long userID, Long bookType, String yearAndMonth) {
+        return bookkeepingDao.queryBookkeepingDateByMonth(userID, bookType, yearAndMonth);
     }
 
     @Override

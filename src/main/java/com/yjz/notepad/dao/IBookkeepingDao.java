@@ -2,6 +2,7 @@ package com.yjz.notepad.dao;
 
 import com.yjz.notepad.bean.BookkeepingBean;
 import com.yjz.notepad.bean.UserBookkeepingBean;
+import com.yjz.notepad.bean.UserMonthDate;
 
 import java.util.List;
 
@@ -24,11 +25,11 @@ public interface IBookkeepingDao {
      * 查询用户某个月记账的天的日期
      *
      * @param userID   用戶id
-     * @param addTime  添加某个月
+     * @param yearAndMonth  添加某年某月
      * @param bookType 记账本类型
      * @return 用户某个月记账的天的日期
      */
-    List<String> queryBookkeepingDateByMonth(Long userID, Long bookType, String addTime);
+    List<UserMonthDate> queryBookkeepingDateByMonth(Long userID, Long bookType, String yearAndMonth);
 
     /**
      * 查询用户某个月所有的记账记录
