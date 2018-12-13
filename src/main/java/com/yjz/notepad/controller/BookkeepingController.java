@@ -68,9 +68,11 @@ public class BookkeepingController {
         resultMap.put("allMonthOut", allMonthOut);
         List<UserDayDate> userDayDates = new ArrayList<>();
         for (String exactTime : dataList) {
-            List<UserBookkeepingBean> userBookkeepingBeans = service.queryAllBookkeeping(userId, bookType, exactTime);
             float allIn = 0f;
             float allOut = 0f;
+            List<UserBookkeepingBean> userBookkeepingBeans = service.queryAllBookkeeping(userId, bookType, exactTime);
+            String exactTimes = "";
+            boolean isChange = true;
             for (UserBookkeepingBean userBookkeepingBean : userBookkeepingBeans) {
                 if (userBookkeepingBean.getMoneyType() == 0) {
                     // 当天总收入
@@ -79,8 +81,12 @@ public class BookkeepingController {
                     // 当天总支出
                     allOut += userBookkeepingBean.getMoney();
                 }
+                if (isChange) {
+                    exactTimes = userBookkeepingBean.getExactTime();
+                    isChange = false;
+                }
             }
-            userDayDates.add(new UserDayDate(allIn, allOut, userBookkeepingBeans));
+            userDayDates.add(new UserDayDate(allIn, allOut,exactTimes, userBookkeepingBeans));
         }
         resultMap.put("dayData", userDayDates);
         return R.ok("请求成功", resultMap);
