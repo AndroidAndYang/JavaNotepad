@@ -12,8 +12,6 @@ public class UserBookkeepingBean {
 
     // 用户ID
     private Long userId;
-    // item 描述
-    private String des;
     // 账本名称
     private String name;
     // 0收入 1支出

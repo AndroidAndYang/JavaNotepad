@@ -3,6 +3,7 @@ package com.yjz.notepad.controller;
 import com.yjz.notepad.bean.*;
 import com.yjz.notepad.service.IBookkeepingService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,10 +28,12 @@ public class BookkeepingController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> addBookkeepingDate(BookkeepingBean bookkeepingBean) {
+    public Map<String, Object> addBookkeepingDate(String as, @RequestBody BookkeepingBean bookkeepingBean) {
+        System.out.println("bookkeepingBean = " + bookkeepingBean.toString());
+        System.out.println("as = " + as);
         Long isSuccess = service.addBookkeepingDate(bookkeepingBean);
         if (isSuccess > 0) {
-            return R.ok("记账成功");
+            return R.ok("记账成功", true);
         } else {
             return R.error("记账失败");
         }
@@ -41,11 +44,14 @@ public class BookkeepingController {
     public Map<String, Object> getUserMonthDate(Long userId, Long bookType, String yearAndMonth) {
         System.out.println("userId = " + userId + " bookType = " + bookType + " monthStr = " + yearAndMonth);
         List<UserMonthDate> userMonthDates = service.queryBookkeepingDateByMonth(userId, bookType, yearAndMonth);
+        HashMap<String, Object> resultMap = new HashMap<>();
         if (userMonthDates.size() <= 0) {
-            return R.error("暂无数据");
+            resultMap.put("allMonthIn", 0);
+            resultMap.put("allMonthOut", 0);
+            resultMap.put("dayData", null);
+            return R.ok("请求成功", resultMap);
         }
         List<String> dataList = new ArrayList<>();
-        HashMap<String, Object> resultMap = new HashMap<>();
         // 一个月的总收入
         float allMonthIn = 0f;
         // 一个月的总支出
@@ -56,12 +62,13 @@ public class BookkeepingController {
             if (!dataList.contains(userMonthDate.getExactTime())) {
                 dataList.add(userMonthDate.getExactTime());
             }
+            // 0 支出 1 收入
             if (userMonthDate.getMoneyType() == 0) {
-                // 收入
-                allMonthIn += userMonthDate.getMoney();
-            } else {
                 // 支出
                 allMonthOut += userMonthDate.getMoney();
+            } else {
+                // 收入
+                allMonthIn += userMonthDate.getMoney();
             }
         }
         resultMap.put("allMonthIn", allMonthIn);
@@ -75,18 +82,18 @@ public class BookkeepingController {
             boolean isChange = true;
             for (UserBookkeepingBean userBookkeepingBean : userBookkeepingBeans) {
                 if (userBookkeepingBean.getMoneyType() == 0) {
-                    // 当天总收入
-                    allIn += userBookkeepingBean.getMoney();
-                } else {
                     // 当天总支出
                     allOut += userBookkeepingBean.getMoney();
+                } else {
+                    // 当天总收入
+                    allIn += userBookkeepingBean.getMoney();
                 }
                 if (isChange) {
                     exactTimes = userBookkeepingBean.getExactTime();
                     isChange = false;
                 }
             }
-            userDayDates.add(new UserDayDate(allIn, allOut,exactTimes, userBookkeepingBeans));
+            userDayDates.add(new UserDayDate(allIn, allOut, exactTimes, userBookkeepingBeans));
         }
         resultMap.put("dayData", userDayDates);
         return R.ok("请求成功", resultMap);

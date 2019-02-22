@@ -10,9 +10,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * author： YJZ
@@ -32,14 +34,17 @@ public class BookkeepingTest {
     @Test
     public void testAddBookkeepingData() {
         BookkeepingBean bookkeepingBean = new BookkeepingBean();
-        bookkeepingBean.setUserId(19L);
+        bookkeepingBean.setUserId(2L);
         bookkeepingBean.setBookTypeId(1L);
         bookkeepingBean.setClassificationId(1L);
         bookkeepingBean.setMoneyType(2L);
         bookkeepingBean.setContent("外快");
         bookkeepingBean.setMoney(1222.7f);
         bookkeepingBean.setAddTime("2018-11");
-        bookkeepingBean.setExactAddTime(new Date());
+
+        SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA);
+        bookkeepingBean.setExactAddTime(formatDate.format(new Date()));
+
         Long isSuccess = service.addBookkeepingDate(bookkeepingBean);
         System.out.println(" isSuccess id = " + isSuccess);
     }
@@ -54,12 +59,13 @@ public class BookkeepingTest {
         float allMonthIn = 0f;
         float allMonthOut = 0f;
         for (UserMonthDate exactDate : userBookkeepingBeans) {
+            // 0 支出 1 收入
             if (exactDate.getMoneyType() == 0) {
-                // 收入
-                allMonthIn += exactDate.getMoney();
-            } else {
                 // 支出
                 allMonthOut += exactDate.getMoney();
+            } else {
+                // 收入
+                allMonthIn += exactDate.getMoney();
             }
             if (!dataList.contains(exactDate.getExactTime())) {
                 dataList.add(exactDate.getExactTime());
