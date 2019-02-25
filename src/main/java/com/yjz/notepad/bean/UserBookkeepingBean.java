@@ -11,7 +11,7 @@ import lombok.Data;
 public class UserBookkeepingBean {
 
     // 用户ID
-    private Long userId;
+    private Long id;
     // 账本名称
     private String name;
     // 0收入 1支出
@@ -22,5 +22,6 @@ public class UserBookkeepingBean {
     private float money;
     // 真实日期
     private String exactTime;
-
+    // 类型
+    private Long classificationId;
 }

@@ -22,7 +22,7 @@
 
     <!-- 查询用户一个月中所有的记账记录 -->
     <select id="queryAllBookkeeping" resultType="UserBookkeepingBean">
-        SELECT b.user_id,b.content,b.money,b.money_type,t.name,b.exact_time
+        SELECT b.id,b.content,b.money,b.money_type,t.name,b.exact_time,b.classification_id
 			FROM bookkeeping b
 			LEFT JOIN user u on u.id = b.user_id
 			LEFT JOIN bookkeeping_type t on t.id = b.type_id

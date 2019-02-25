@@ -81,6 +81,7 @@ public class BookkeepingController {
             String exactTimes = "";
             boolean isChange = true;
             for (UserBookkeepingBean userBookkeepingBean : userBookkeepingBeans) {
+                System.out.println(userBookkeepingBean.toString());
                 if (userBookkeepingBean.getMoneyType() == 0) {
                     // 当天总支出
                     allOut += userBookkeepingBean.getMoney();
