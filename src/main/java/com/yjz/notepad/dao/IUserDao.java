@@ -25,6 +25,14 @@ public interface IUserDao {
     Long addUserByObject(User user);
 
     /**
+     * 查询单个用户
+     *
+     * @param id 用戶id
+     * @return userBean
+     */
+    User queryUserById(Long id);
+
+    /**
      * @param id userID
      * @return 成功的状态
      */

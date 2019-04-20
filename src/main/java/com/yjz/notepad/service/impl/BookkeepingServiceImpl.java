@@ -32,7 +32,7 @@ public class BookkeepingServiceImpl implements IBookkeepingService {
     }
 
     @Override
-    public List<UserBookkeepingBean> queryAllBookkeeping(Long userID, Long bookType, String exactTime) {
-        return bookkeepingDao.queryAllBookkeeping(userID, bookType, exactTime);
+    public List<UserBookkeepingBean> queryAllBookkeeping(Long userID, Long bookType, String exactTime,int currentPage,int pageSize) {
+        return bookkeepingDao.queryAllBookkeeping(userID, bookType, exactTime,currentPage,pageSize);
     }
 }

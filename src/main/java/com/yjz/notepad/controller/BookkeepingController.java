@@ -41,7 +41,7 @@ public class BookkeepingController {
 
     @RequestMapping(value = "/month_list", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> getUserMonthDate(Long userId, Long bookType, String yearAndMonth) {
+    public Map<String, Object> getUserMonthDate(Long userId, Long bookType, String yearAndMonth, int currentPage, int pageSize) {
         System.out.println("userId = " + userId + " bookType = " + bookType + " monthStr = " + yearAndMonth);
         List<UserMonthDate> userMonthDates = service.queryBookkeepingDateByMonth(userId, bookType, yearAndMonth);
         HashMap<String, Object> resultMap = new HashMap<>();
@@ -74,10 +74,14 @@ public class BookkeepingController {
         resultMap.put("allMonthIn", allMonthIn);
         resultMap.put("allMonthOut", allMonthOut);
         List<UserDayDate> userDayDates = new ArrayList<>();
-        for (String exactTime : dataList) {
+
+        int length = dataList.size() > currentPage * pageSize ? currentPage * pageSize : dataList.size();
+
+        for (int i = currentPage * pageSize - pageSize; i < length; i++) {
+            String exactTime = dataList.get(i);
             float allIn = 0f;
             float allOut = 0f;
-            List<UserBookkeepingBean> userBookkeepingBeans = service.queryAllBookkeeping(userId, bookType, exactTime);
+            List<UserBookkeepingBean> userBookkeepingBeans = service.queryAllBookkeeping(userId, bookType, exactTime, currentPage, pageSize);
             String exactTimes = "";
             boolean isChange = true;
             for (UserBookkeepingBean userBookkeepingBean : userBookkeepingBeans) {
@@ -96,6 +100,7 @@ public class BookkeepingController {
             }
             userDayDates.add(new UserDayDate(allIn, allOut, exactTimes, userBookkeepingBeans));
         }
+
         resultMap.put("dayData", userDayDates);
         return R.ok("请求成功", resultMap);
     }

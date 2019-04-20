@@ -6,6 +6,10 @@
         select * from user
     </select>
 
+    <select id="queryUserById" parameterType="Long" resultType="User">
+         select * from user where id = #{id}
+    </select>
+
     <insert id="addUserByObject" parameterType="User">
         <!--
             返回新增时的主键ID, MySql在order中使用AFTER,而oracle使用before

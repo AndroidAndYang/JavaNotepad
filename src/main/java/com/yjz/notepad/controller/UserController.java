@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.ws.rs.GET;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -55,6 +56,17 @@ public class UserController {
             return R.ok("注册成功", user.getId());
         } else {
             return R.error("注册失败");
+        }
+    }
+
+    @RequestMapping(value = "/query", method = RequestMethod.GET)
+    @ResponseBody
+    public HashMap<String, Object> query(Long id) {
+        User user = userService.queryUserById(id);
+        if (user == null) {
+            return R.error("该用户不存在");
+        } else {
+            return R.ok("查詢成功", user);
         }
     }
 

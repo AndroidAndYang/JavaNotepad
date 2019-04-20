@@ -32,13 +32,15 @@ public interface IBookkeepingDao {
     List<UserMonthDate> queryBookkeepingDateByMonth(Long userID, Long bookType, String yearAndMonth);
 
     /**
-     * 查询用户某个月所有的记账记录
+     * 查询用户某个月某一天所有的记账记录
      *
-     * @param userID   用戶id
+     * @param userID    用戶id
      * @param exactTime 添加的某一天
-     * @param bookType 记账本类型
+     * @param bookType  记账本类型
+     * @param currentPage 当前的页面
+     * @param pageSize 一页显示多少条
      * @return 用户某个月所有的记账记录
      */
-    List<UserBookkeepingBean> queryAllBookkeeping(Long userID, Long bookType, String exactTime);
+    List<UserBookkeepingBean> queryAllBookkeeping(Long userID, Long bookType, String exactTime,int currentPage,int pageSize);
 
 }

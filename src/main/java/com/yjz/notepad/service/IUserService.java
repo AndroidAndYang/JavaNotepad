@@ -14,7 +14,6 @@ public interface IUserService {
     /**
      * @param user user
      * @return 插入的主键ID
-     *
      */
     Long addUserByObject(User user);
 
@@ -23,6 +22,14 @@ public interface IUserService {
      * @return 成功的状态
      */
     int deleteUserById(Long id);
+
+    /**
+     * 查询单个用户
+     *
+     * @param id 用戶id
+     * @return userBean
+     */
+    User queryUserById(Long id);
 
     /**
      * 查詢全部

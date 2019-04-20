@@ -55,7 +55,7 @@ public class BookkeepingTest {
     @Test
     public void testQueryUserByBookkeepingType() {
         List<String> dataList = new ArrayList<>();
-        List<UserMonthDate> userBookkeepingBeans = service.queryBookkeepingDateByMonth(2L, 1L, "2018-11");
+        List<UserMonthDate> userBookkeepingBeans = service.queryBookkeepingDateByMonth(2L, 1L, "2019-2");
         float allMonthIn = 0f;
         float allMonthOut = 0f;
         for (UserMonthDate exactDate : userBookkeepingBeans) {
@@ -75,7 +75,7 @@ public class BookkeepingTest {
         for (String exactTime : dataList) {
             float allIn = 0f;
             float allOut = 0f;
-            List<UserBookkeepingBean> userBookkeepingBeans1 = service.queryAllBookkeeping(2L, 1L, exactTime);
+            List<UserBookkeepingBean> userBookkeepingBeans1 = service.queryAllBookkeeping(2L, 1L, exactTime,0,5);
             for (UserBookkeepingBean userBookkeepingBean : userBookkeepingBeans1) {
                 if (userBookkeepingBean.getMoneyType() == 1) {
                     // 支出

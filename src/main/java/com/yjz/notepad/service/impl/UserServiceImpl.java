@@ -30,6 +30,11 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
+    public User queryUserById(Long id) {
+        return userDao.queryUserById(id);
+    }
+
+    @Override
     public List<User> queryUserAll() {
         return userDao.queryUserAll();
     }
